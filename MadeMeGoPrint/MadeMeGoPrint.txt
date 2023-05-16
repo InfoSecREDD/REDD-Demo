@@ -1,7 +1,8 @@
 REM Author: REDD (InfoSecREDD)
 REM Version: 0.1
-REM Category: Execution Troll
+REM Category: Execution Troll via Printer
 REM Target: All Windows
+REM  - This Payload sends content straight to the Default Printer connected to Victim Machine.
 DELAY 500
 GUI d
 DELAY 500
